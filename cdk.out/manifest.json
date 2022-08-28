@@ -1,0 +1,100 @@
+{
+  "version": "20.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "appStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "appStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "appStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "appStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4f8f78148389575e37b4126657524ec4759f1f3d50f296c7f432a445b27e8780.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "appStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "appStack.assets"
+      ],
+      "metadata": {
+        "/appStack/LambdaFn/LambdaHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaFnLambdaHandlerServiceRole10227839"
+          }
+        ],
+        "/appStack/LambdaFn/LambdaHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaFnLambdaHandler92187672"
+          }
+        ],
+        "/appStack/LambdaFn/LambdaHandler/FunctionUrl/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaFnLambdaHandlerFunctionUrlEDAF7E83"
+          }
+        ],
+        "/appStack/LambdaFn/LambdaHandler/invoke-function-url": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaFnLambdaHandlerinvokefunctionurlF9B23B48"
+          }
+        ],
+        "/appStack/LambdaFn/TheUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaFnTheUrl0C837185"
+          }
+        ],
+        "/appStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/appStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/appStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/appStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "appStack"
+    }
+  }
+}
