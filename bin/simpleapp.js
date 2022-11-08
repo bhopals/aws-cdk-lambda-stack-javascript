@@ -9,7 +9,7 @@ new AppStack(app, "appStack", {
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere/region/az. */
   /* Uncomment the next line to specialize this stack for the AWS Account
-   * and Region that are implied by current CLI configuration. */
+   * and Region that are implied by current configuration. */
   // env: { account: process.env.CDK_DEFAULT_ACCOUNT, regions: process.env.CDK_DEFAULT_REGION },
   /* Uncomment the next line if you know exactly what Account and Region you
    * want to deploy the stack to. */
