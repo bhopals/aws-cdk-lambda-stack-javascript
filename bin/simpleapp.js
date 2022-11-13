@@ -7,7 +7,7 @@ const app = new cdk.App();
 new AppStack(app, "appStack", {
   /* If you don't specify 'environment', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
-   * but a single synthesized template can be deployed anywhere/region/az/location. */
+   * but a single synthesized template can be also be deployed anywhere/region/az/location. */
   /* Uncomment the next line to specialize this stack for the AWS Account
    * and Region that are implied by current configuration. */
   // env: { account: process.env.CDK_DEFAULT_ACCOUNT, regions: process.env.CDK_DEFAULT_REGION },
