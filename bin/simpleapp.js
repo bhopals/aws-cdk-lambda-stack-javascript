@@ -5,7 +5,7 @@ const { AppStack } = require("../lib/app-stack");
 
 const app = new cdk.App();
 new AppStack(app, "appStack", {
-  /* If you don't specify 'environments', this stack will be environment-agnostic.
+  /* If you don't specify 'environments', this ssstack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be also be deployed anywhere/region/az/location. */
   /* Uncomment the next line to specialize this stack for the AWS Account
