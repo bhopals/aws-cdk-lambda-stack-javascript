@@ -10,7 +10,7 @@ new AppStack(app, "appStack", {
    * but a single synthesized template can be also be deployed anywhere/region/az/location. */
   /* Uncomment the next line to specialize this stack for the AWS Account
    * and Region that are implied by current configuration. */
-  // env: { account: process.env.CDK_DEFAULT_ACCOUNT, regions: process.env.CDK_DEFAULT_REGION },
+  // env: { account: process.env.CDK_DEFAULT_ACCOUNT, regions: process.env.CDK_DEFAULT_REGION, process.env.AWS_REGION },
   /* Uncomment the next line if you know exactly what Account and Region you
    * want to deploy the stack to. */
   // env: { account: '123456789012', region: 'us-east-1' },
