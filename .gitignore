@@ -52,7 +52,7 @@ typings/
 
 # Optional npm cache directory
 .npm
-
+.npm-debug
 # Optional eslint cache
 .eslintcache
 
