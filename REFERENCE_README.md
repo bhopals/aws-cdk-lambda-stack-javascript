@@ -1,4 +1,4 @@
-### S3 AWS CLI
+### S3 AWS CLI Commands
 
 aws s3api put-bucket-lifecycle-configuration \
  --lifecycle-configuration '{"Rules":[{
