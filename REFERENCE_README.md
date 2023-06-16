@@ -4,6 +4,7 @@ aws s3api put-bucket-lifecycle-configuration \
  --lifecycle-configuration '{"Rules":[{
 "ID":"empty-bucket",
 "Status":"Enabled",
+"tags": [],
 "Prefix":"",
 "Expiration":{"Days":1},
 "NoncurrentVersionExpiration":{"NoncurrentDays":1}
