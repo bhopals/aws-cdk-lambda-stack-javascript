@@ -1,3 +1,4 @@
 module.exports = {
-  testEnvironment: 'node'
-}
+  testEnvironment: "node",
+  env: process.env.NODE_ENV,
+};
