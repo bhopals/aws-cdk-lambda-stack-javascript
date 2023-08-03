@@ -16,7 +16,7 @@ exports.main = async (event, context, callback) => {
     statusCode: 200,
     headers: {},
     body: JSON.stringify({
-      msg: "Success Response",
+      msg: "Success Lambda Response",
       event,
       context,
       callback,
